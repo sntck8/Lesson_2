@@ -3,17 +3,16 @@ print("Список чисел:", numbers)
 primes = []
 not_primes = []
 is_prime = True
-for num in numbers:
-    if num > 1:
-        for i in range(2, num):
-            if (num % i) == 0:
+for i in numbers:
+    if i > 1:
+        for k in range(2, i):
+            if (i % k) == 0:
                 is_prime = False
                 break
         if is_prime:
-            primes.append(num)
+            primes.append(i)
         else:
-            not_primes.append(num)
+            not_primes.append(i)
         is_prime = True
 print("Простые числа:", primes)
 print("Составные числа: ", not_primes)
-
